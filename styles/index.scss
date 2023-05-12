@@ -1,0 +1,174 @@
+@use "./settings" as set;
+
+header {
+    background: linear-gradient(set.$bg1, set.$bg2);
+    
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    text-align: center;
+    @media screen and (min-width: 680px){
+        &{
+        
+           max-width: 400px;
+           border-radius: 40px;
+        }
+    }
+    h1{
+        
+        font-size: 0.7rem;
+        padding: 15px 0;
+        color: set.$neutral3;
+    }
+    h2, h3{
+        color: set.$neutral2;
+    }
+    p{
+        font-size: 0.8rem;
+        width: 70%;
+        margin: 0 auto;
+        padding-bottom: 40px;
+    }
+    .p{
+        padding: 20px 0 0 0;
+    }
+    .circle{
+        background: linear-gradient(set.$circle1, set.$circle2) ;
+        width: 110px;
+        height: 110px;
+        border-radius: 50%;
+        margin: 0 auto 20px auto;
+        p{
+            font-size: 0.5rem;
+        }
+        h2{
+            padding-top: 19px;
+            font-size: 1.6rem;
+        }
+        @media screen and (min-width: 680px){
+            &{
+               width: 200px;
+               height: 200px;
+               margin: 10px auto 30px auto;
+            }
+            h2{
+                padding-top: 50px;
+                font-size: 2.5rem;
+            }
+            p{
+                font-size: 0.8rem;
+            }
+        }
+        
+       
+    }
+    h3{
+        margin: 10px 0;
+    }
+    
+}
+h4{
+    margin: 20px 0 20px 40px;
+    color: set.$neutral4;
+}
+.grid{
+    display: grid;
+    justify-content: center;
+    @media screen and (min-width: 680px){
+        &{
+        
+           margin-top: -10px;
+        }
+    }
+    
+}
+
+.card{
+    min-width: 85vw;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 85%;
+    @media screen and (min-width: 680px){
+        &{
+            min-width: 300px;
+        }
+    }
+    margin: 10px  0;
+    padding: 15px 0;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    h4{
+        margin: 0;
+        padding-left: 60px;
+        font-size: 0.9rem;
+    }
+    p{
+        padding-right: 20px;
+        font-size: 0.9rem;
+    }
+    
+    img{
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        padding-left: 20px;
+        
+        
+    }
+}
+#red{
+    background: set.$primary11;
+    h4{
+        color: set.$primary1;
+    }
+}
+#yellow{
+    background: set.$primary22;
+    h4{
+        color: set.$primary2;
+    }
+}
+#green{
+    background: set.$primary33;
+    h4{
+        color: set.$primary3;
+    }
+}
+#blue{
+    background: set.$primary44;
+    h4{
+        color: set.$primary4;
+    }
+    
+}
+.btn{
+    display: block;
+    width: 75vw;
+    text-decoration: none;
+    margin: 20px auto;
+    padding: 20px;
+    text-align: center;
+    color: set.$neutral2;
+    border-radius: 60px;
+    font-weight: 600;
+    background: set.$neutral4;
+    @media screen and (min-width: 680px){
+        &{
+            min-width: 250px;
+            width: 280px;
+            padding: 10px;
+            font-size: 0.8rem;
+        }
+    }
+}
+main{
+    @media screen and (min-width: 680px){
+        &{
+           max-width: 400px;
+           border-radius: 40px;
+           
+        }
+    }
+}

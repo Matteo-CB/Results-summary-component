@@ -1,0 +1,132 @@
+@use "sass:math";
+
+// font
+
+@font-face {
+    font-family: HangenGrotesk;
+    src: url('../HankenGrotesk-VariableFont_wght.ttf');
+}
+// fonction
+
+@function toRem($px) {
+	@if not $px {
+		@error 'Missing argument: `$px`.';
+	}
+	@return math.div($px, 18) + rem;
+}
+
+// variable
+$font-size: toRem(18);
+$font: HangenGrotesk;
+// --
+$primary11: hsla(0, 100%, 67%, 0.100);
+$primary1: hsl(0, 100%, 67%);
+$primary22: hsla(39, 100%, 56%, 0.100);
+$primary2: hsl(39, 100%, 56%);
+$primary33: hsla(166, 100%, 37%, 0.100);
+$primary3: hsl(166, 100%, 37%);
+$primary44: hsla(234, 85%, 45%, 0.100);
+$primary4: hsl(234, 85%, 45%);
+
+// ### Primary
+
+// - Light red: hsl(0, 100%, 67%)
+// - Orangey yellow: hsl(39, 100%, 56%)
+// - Green teal: hsl(166, 100%, 37%)
+// - Cobalt blue: hsl(234, 85%, 45%)
+
+// --
+// ## Gradients
+
+$bg1: hsl(252, 100%, 67%);
+$bg2: hsl(241, 81%, 54%);
+
+// - Light slate blue (background): hsl(252, 100%, 67%)
+// - Light royal blue (background): hsl(241, 81%, 54%)
+
+// --
+$circle1: hsla(256, 72%, 46%, 1);
+$circle2: hsla(241, 72%, 46%, 0);
+
+// - Violet blue (circle): hsla(256, 72%, 46%, 1)
+// - Persian blue (circle): hsla(241, 72%, 46%, 0)
+
+// --
+$neutral1: hsl(0, 0%, 100%);
+$neutral2: hsl(221, 100%, 96%);
+$neutral3: hsl(241, 100%, 89%);
+$neutral4: hsl(224, 30%, 27%);
+
+// ### Neutral
+
+// - White: hsl(0, 0%, 100%)
+// - Pale blue: hsl(221, 100%, 96%)
+// - Light lavender: hsl(241, 100%, 89%)
+// - Dark gray blue: hsl(224, 30%, 27%)
+
+//--
+
+// attribution
+
+.attribution {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+    bottom: 0;
+    font-size: toRem(9);
+    text-align: center;
+    font-family: $font;
+    font-weight: 700;
+    a, a:visited {
+        color: $circle1;
+        font-size: toRem(9);
+    }
+}
+
+// généraux
+
+*{
+    font-family: $font;
+    padding: 0;
+    margin: 0;
+    font-size: $font-size;
+}
+body{
+    
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 45% 55%;
+    @media screen and (min-width: 680px){
+        &{
+            width: 800px;
+            height: 487.750px;
+            grid-template-rows: 100%;
+            grid-template-columns: 50% 50%;
+            box-shadow:
+  4.8px 3.7px 5.3px rgba(0, 0, 0, 0.028),
+  16.1px 12.3px 17.9px rgba(0, 0, 0, 0.042),
+  72px 55px 80px rgba(0, 0, 0, 0.07)
+;
+border-radius: 40px;
+            
+        }
+    }
+}
+p{
+    color: $neutral3;
+    span{
+        color: $neutral4;
+    }
+}
+
+
